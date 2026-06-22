@@ -4,8 +4,8 @@ from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
 
 # --- Setup ---
-PINECONE_KEY = "pcsk_5ctgLG_BS2s3B5TUmrExjq6MsbiQkUokQek3U7huDCj5iwFVyqsVBgKPr3Sd47Rut1Wg1P"
-GEMINI_KEY = "AIzaSyDiPVi7_OMLuHD-Csg7YcsH9Zd_GSHTyeA"
+PINECONE_KEY = ""
+GEMINI_KEY = ""
 
 pc = Pinecone(api_key=PINECONE_KEY)
 index = pc.Index("news-index")
