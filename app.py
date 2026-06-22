@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone
 
 # Setup
-pc = Pinecone(api_key="pcsk_5ctgLG_BS2s3B5TUmrExjq6MsbiQkUokQek3U7huDCj5iwFVyqsVBgKPr3Sd47Rut1Wg1P")
+pc = Pinecone(api_key="")
 index = pc.Index("news-index")
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
