@@ -6,10 +6,9 @@ def get_tech_news():
     url = "news.google.com/rss"
     
     response = requests.get(url)
-    # RSS Feed-ah parse panna 'xml' feature use panrom
+    
     soup = BeautifulSoup(response.content, features="xml")
     
-    # Ella news items-ahyum ('item' tag) edukkurom
     articles = soup.find_all('item')
     
     print(f"Total articles found: {len(articles)}")
@@ -20,11 +19,10 @@ def get_tech_news():
         link = article.link.text
         description = article.description.text if article.description else "No description"
 
-        # "Layoff" related news-ah mattum filter panrom (Important for your project)
         if "layoff" in title.lower() or "job cut" in title.lower():
             print(f"📍 NEWS FOUND: {title}")
             print(f"Link: {link}")
-            print(f"Summary: {description[:100]}...") # Mudhal 100 characters mattum
+            print(f"Summary: {description[:100]}...")
             print("-" * 30)
 
 if __name__ == "__main__":
